@@ -4,25 +4,37 @@ export default function ReceituarioDigital() {
   return (
     <main className="pt-5">
       {/* Seção de Introdução */}
-      <section id="inicio" className="container-fluid mt-5">
-        <div className="container-fluid my-5">
-          <div className="row align-items-center">
-            <div className="col-md-6 pb-3 text-center">
-              <h1 className="display-5 text-center">
-              Receituário Digital
-              </h1>
-            </div>
-            <div className="col-md-6 text-center">
-              <img
-                src="/imagens/receituario-digital/principal.png"
-                alt="Imagem do Projeto Receituário Digital"
-                className="img-fluid rounded"
-                style={{ maxWidth: '300px' }}
-              />
-            </div>
-          </div>
+      <section
+      id="inicio"
+      className="container-fluid d-flex align-items-center justify-content-center text-center"
+      style={{
+        backgroundImage: "url('/imagens/receituario-digital/principal.png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '80vh',
+        position: 'relative',
+        color: 'white'
+      }}
+      >
+        {/* Sombreamento escuro */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.6)', // escurece a imagem
+            zIndex: 1,
+          }}
+        ></div>
+
+        {/* Título centralizado */}
+        <div style={{ zIndex: 2 }}>
+          <h1 className="display-4 fw-bold">Receituário Digital</h1>
         </div>
       </section>
+
 
       {/* Seção de Detalhes do Projeto */}
       <section className="container py-5">
@@ -65,25 +77,38 @@ export default function ReceituarioDigital() {
       {/* Seção de Imagens do Projeto */}
       <section className="container py-5 bg-light">
         <h2 className="mb-4 text-center">Imagens do Projeto</h2>
+        <hr className="my-4" />
+
         <div className="row">
-          <div className="col-md-4 mb-4">
+          <div className="col-md-12 mb-4">
             <img
-              src="/imagens/receituario-digital/tela1.png"
-              alt="Tela 1 do Projeto"
+              src="/imagens/receituario-digital/login.png"
+              alt="Tela de Login"
               className="img-fluid rounded"
             />
           </div>
-          <div className="col-md-4 mb-4">
+          <hr className="my-4" />
+
+          <div className="col-md-12 mb-4">
             <img
-              src="/imagens/receituario-digital/tela2.png"
-              alt="Tela 2 do Projeto"
+              src="/imagens/receituario-digital/gerenciamento.png"
+              alt="Tela de gerenciamento"
               className="img-fluid rounded"
             />
           </div>
-          <div className="col-md-4 mb-4">
+          <hr className="my-4" />
+          <div className="col-md-12 mb-4">
             <img
-              src="/imagens/receituario-digital/tela3.png"
-              alt="Tela 3 do Projeto"
+              src="/imagens/receituario-digital/cadastramentode.png"
+              alt="Tela de cadastro de paciente"
+              className="img-fluid rounded"
+            />
+          </div>
+          <hr className="my-4" />
+          <div className="col-md-12 mb-4">
+            <img
+              src="/imagens/receituario-digital/receita.png"
+              alt="Receita para impressão"
               className="img-fluid rounded"
             />
           </div>
@@ -93,14 +118,15 @@ export default function ReceituarioDigital() {
       {/* Seção de Link para o Repositório */}
       <section className="container py-5 text-center">
         <a
-          href="https://github.com/seu-usuario/receituario-digital"
+          href="https://github.com/andreLuAlmeida/TCC---Receituario-Digital.git"
           target="_blank"
           rel="noopener noreferrer"
           className="btn btn-primary"
         >
-          Ver Código no GitHub
+          Código no GitHub <i className="bi bi-github me-2"></i> 
         </a>
       </section>
+
     </main>
   );
 }

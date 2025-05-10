@@ -6,54 +6,76 @@ export default function Home() {
     //Corpo da página
     <main className="pt-5">
       {/*Seção Inicial*/}
-      <section id="inicio" className="container-fluid mt-5">
-        <div className="container-fluid my-5">
-          <div className="row align-items-center">
+      <section
+        id="inicio"
+        className="container-fluid text-white"
+        style={{
+          backgroundImage: "url('/imagens/code.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          paddingTop: "4rem",
+          paddingBottom: "4rem",
+        }}
+      >
+        <div className="container-fluid" style={{ backgroundColor: 'rgba(0,0,0,0.5)', borderRadius: '8px' }}>
+          <div className="row align-items-center py-5">
             <div className="col-md-6 pb-3 text-center">
-             <h1 className="display-5 text-center">
-               <span className="d-block fs-4">Olá, sou André Almeida</span>
-                 Desenvolvedor Full-Stack <br />
-                 <span className="d-block fs-5">Transformando ideias em experiências digitais</span>
-               </h1>
+              <h1 className="display-5 text-center">
+                <span className="d-block fs-4">Olá, sou André Almeida</span>
+                Desenvolvedor Full-Stack <br />
+                <span className="d-block fs-5">Transformando ideias em experiências digitais</span>
+              </h1>
             </div>
             <div className="col-md-6 text-center">
               <img
-                src="../public/imagens/andre-portfolio.jpg"
+                src="/imagens/andre-portfolio.jpg"
                 alt="Foto de André"
-                className="img-fluid rounded"
-                style={{ maxWidth: '300px' }}
+                className="img-fluid rounded-circle border border-white border-4 shadow"
+                style={{ maxWidth: '300px', objectFit: 'cover' }}
               />
             </div>
           </div>
-        </div>
-        <div className="my-5 pt-5 align-items-center">
-          <div className="container text-center">
-          <h1><strong>Sobre</strong><br />
-          <span className="d-block fs-6 display-6">Propósito profissional e área de atuação</span>
-            </h1>
-          </div>
-          <div className="container text-center py-3 col-8">
-            <p>Sou Desenvolvedor Full-Stack com formação técnica em Informática pelo IFMG – Campus Formiga 
-              e atualmente curso Ciência da Computação na UFSJ. Tenho experiência com ferramentas de 
-              desenvolvimento web e mobile, além de grande interesse por lógica de programação e 
-              resolução de problemas. Busco constantemente evoluir por meio de cursos, palestras e 
-              projetos, e acredito que desafios reais são a melhor forma de crescimento profissional. 
-              Estou sempre pronto para transformar ideias em soluções digitais completas e funcionais.</p>
-          </div>
-          <div className="py-3 pb-5 align-items-center">
-            <div className="text-center mb-3">
-              <h6 className="fw-bold">Baixe meu currículo e conheça mais sobre <br />minhas habilidades e trajetória acadêmica :</h6>
+      
+          <div className="my-5 pt-5 align-items-center">
+            <div className="container text-center">
+              <h1>
+                <strong>Sobre</strong><br />
+                <span className="d-block fs-6 display-6">Propósito profissional e área de atuação</span>
+              </h1>
             </div>
-            <div className="row justify-content-center">
-              <div className="col-2 d-grid">
-                <a href="/downloads/curriculo-andre.pdf" download className="btn btn-primary">
-                  <strong>Download <i class="bi bi-file-earmark-arrow-down"></i></strong>
-                </a>
+      
+            <div className="container text-center py-3 col-8">
+              <p>
+                Sou Desenvolvedor Full-Stack com formação técnica em Informática pelo IFMG – Campus Formiga 
+                e atualmente curso Ciência da Computação na UFSJ. Tenho experiência com ferramentas de 
+                desenvolvimento web e mobile, além de grande interesse por lógica de programação e 
+                resolução de problemas. Busco constantemente evoluir por meio de cursos, palestras e 
+                projetos, e acredito que desafios reais são a melhor forma de crescimento profissional. 
+                Estou sempre pronto para transformar ideias em soluções digitais completas e funcionais.
+              </p>
+            </div>
+      
+            <div className="py-3 pb-5 align-items-center">
+              <div className="text-center mb-3">
+                <h6 className="fw-bold">
+                  Baixe meu currículo e conheça mais sobre <br />
+                  minhas habilidades e trajetória acadêmica :
+                </h6>
+              </div>
+      
+              <div className="row justify-content-center">
+                <div className="col-2 d-grid">
+                  <a href="/downloads/curriculo-andre.pdf" download className="btn btn-primary">
+                    <strong>Download <i className="bi bi-file-earmark-arrow-down"></i></strong>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+     </section>
+
 
      {/*Seção Cards de Projetos --> Ao clicar em um dos cards, você será direcionado
      para a página do projeto contendo fotos e informações sobre ele*/}
@@ -61,7 +83,7 @@ export default function Home() {
         <h2 className="mb-4 text-center">Projetos</h2>
         <div className="row">
 
-          <div className="col-md-6 mb-4">
+          <div className="col-md-12 mb-4">
             <a href="/projetos/receituario-digital" className="text-decoration-none text-dark">
               <div className="card h-100 project-card">
                 <img src="/imagens/receituario-digital/principal.png" className="card-img-top" alt="Projeto 1" />
@@ -69,30 +91,6 @@ export default function Home() {
                   <h5 className="card-title">Receituário Digital</h5>
                   <p className="card-text"> Plataforma web para prescrição e dispensa de receitas médicas digitais, com autenticação via QR Code e controle de acesso por perfis de usuário (médico, farmácia e administrador).</p>
                   <p class="small text-muted"><strong>Tecnologias:</strong> Laravel, MySQL, Bootstrap, Blade, jQuery, QRCode.js, printThis.</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div className="col-md-6 mb-4">
-            <a href="/projetos/app-tarefas" className="text-decoration-none text-dark">
-              <div className="card h-100 project-card">
-                <img src="/imagens/app-tarefas.png" className="card-img-top" alt="Projeto 2" />
-                <div className="card-body">
-                  <h5 className="card-title">App de Tarefas</h5>
-                  <p className="card-text">Aplicativo web para gerenciar tarefas diárias com React e Firebase.</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div className="col-md-6 mb-4">
-            <a href="/projetos/loja-online" className="text-decoration-none text-dark">
-              <div className="card h-100 project-card">
-                <img src="/imagens/loja-online.png" className="card-img-top" alt="Projeto 3" />
-                <div className="card-body">
-                  <h5 className="card-title">Loja Online</h5>
-                  <p className="card-text">E-commerce fictício com frontend em React e integração com API REST.</p>
                 </div>
               </div>
             </a>
